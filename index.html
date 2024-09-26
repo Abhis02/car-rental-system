@@ -3,103 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Rental System</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Car Rental Website</title>
+    <!--Link to css-->
+    <link rel = "stylesheet" href="style.css">
+    <link rel="stylesheet" href="auth.css">
+
+    <!--Box Icon-->
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+   <!-- Include Google Maps API (for Places Autocomplete) -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+
 </head>
 <body>
-    <!-- Header -->
+    <!--Header-->
     <header>
-        <nav>
-            <div class="logo">VroomVroom</div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Login/Register</a></li>
-            </ul>
-        </nav>
+        <a href="#" class="logo"><img src="rolls_royce.jpg" alt=""></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#ride">Ride</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#review">About</a></li>
+            <li><a href="#review">Reviews</a></li>
+        </ul>
+        <div class="header-btn">
+            <a href="signup.html" class="sign-up">Sign Up</a>
+            <a href="login.html" class="log-in">Log In</a>  
+        </div>
     </header>
+    <!--Home-->
+    <section class="home" id="home">
+        <div class="text">
+            <h1><spam>Looking</spam> to rent a car</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <div class="app-stores">
+                <img src="app.jpeg" alt="">
+                <img src="play.png" alt="">
+            </div>
+        </div>
+        <div class="form-container">
+            <form id="rental-form">
+                <div class="input-box">
+                    <span>Location</span>
+                    <input type="search" id="location" placeholder="Search Places" required>
+                </div>
+                <div class="input-box">
+                    <span>Pick-up Date</span>
+                    <input type="date" id="pickup-date" required>
+                </div>
+                <div class="input-box">
+                    <span>Return Date</span>
+                    <input type="date" id="return-date" required>
+                </div>
+                <button type="submit" id="submit-btn" class="btn">Submit</button>
 
-    <!-- Homepage -->
-    <section class="hero">
-        <h1>Rent the Best Cars at the Best Prices</h1>
-        <form class="search-bar">
-            <input type="text" placeholder="Location">
-            <select>
-                <option value="all">Select City</option>
-                <option value="mumbai">mumbai</option>
-                <option value="kolkata">kolkata</option>
-                <option value="chennai">Chennai</option>
-            </select>
-        
-            <select>
-            <input type="date" placeholder="Pick-up Date">
+                <div id="loading-spinner" class="loading-spinner" style="display: none;">
+                    <div class="spinner"></div>
+                </div>
+                
+            </form>
+        </div>
+    </section>
+
+<!--Ride-->
+<section class="ride" id="ride">
+    <div class="heading">
+        <span>How its work</span>
+        <h1>Rent with 3 easy steps</h1>
+    </div>
+    <div class="ride-container">
+        <div class="box">
+            <i class="bx bxs-map"></i>
+            <h2>Choose A Location</h2> 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sunt dignissimos fugiat ipsum, iure unde.</p>
+
+        </div>
+        <div class="box">
+            <i class="bx bxs-calendar-check"></i>
+            <h2>Pick-Up Date</h2> 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sunt dignissimos fugiat ipsum, iure unde.</p>
+
+        </div>
+        <div class="box">
+            <i class="bx bxs-calendar-star"></i>
+            <h2>Book A Car</h2> 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sunt dignissimos fugiat ipsum, iure unde.</p>
+
+        </div>
+    </div>
+</section>
+
+<!-- Cars Section -->
+<section id="ride" class="car-section">
+    <h2>Choose Your Ride</h2>
+    <div class="car-grid">
+        <div class="car-card">
+            <img src="range_rover.jpg" alt="Car 1">
+            <h3>SUV Model 2024</h3>
+            <p>$80/day</p>
+            <a href="#" class="btn">Rent Now</a>
+        </div>
+        <div class="car-card">
+            <img src="sedan.jpg" alt="Car 2">
+            <h3>Sedan Model 2023</h3>
+            <p>$60/day</p>
+            <a href="#" class="btn">Rent Now</a>
+        </div>
+        <div class="car-card">
+            <img src="cooper.jpg" alt="Car 3">
+            <h3>Convertible Model</h3>
+            <p>$90/day</p>
+            <a href="#" class="btn">Rent Now</a>
+        </div>
+        <div class="car-card">
+            <img src="sports.jpg" alt="Car 4">
+            <h3>Sports Model 2024</h3>
+            <p>$100/day</p>
+            <a href="#" class="btn">Rent Now</a>
+        </div>
+        <div class="car-card">
+            <img src="rolls_royce.jpg" alt="Car 5">
+            <h3>Luxury Model 2023</h3>
+            <p>$120/day</p>
+            <a href="#" class="btn">Rent Now</a>
+        </div>
+        <div class="car-card">
+            <img src="crossover.jpg" alt="Car 5">
+            <h3>crossover Model 2024</h3>
+            <p>$80/day</p>
+            <a href="#" class="btn">Rent Now</a>
+        </div>
+        <div class="car-card">
+            <img src="MUV.jpg" alt="Car 5">
+            <h3>MUV Model 2022</h3>
+            <p>$60/day</p>
+            <a href="#" class="btn">Rent Now</a>
+        </div>
+        <div class="car-card">
+            <img src="Coupe.jpg" alt="Car 5">
+            <h3>Coupe Model 2022</h3>
+            <p>$100/day</p>
+            <a href="#" class="btn">Rent Now</a>
+        </div>
+    </div>
+</section>
+<!-- Services Section -->
+<section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <i class='bx bxs-car'></i>
+            <h3>Wide Range of Cars</h3>
+            <p>Choose from a wide variety of cars for your needs.</p>
+        </div>
+        <div class="service-card">
+            <i class='bx bx-wrench'></i>
+            <h3>Maintenance</h3>
+            <p>We offer 24/7 roadside assistance for our customers.</p>
+        </div>
+        <div class="service-card">
+            <i class='bx bxs-map'></i>
+            <h3>GPS Support</h3>
+            <p>Get real-time GPS navigation to stay on track.</p>
+        </div>
+        <div class="service-card">
+            <i class='bx bxs-lock'></i>
+            <h3>Secure Payment</h3>
+            <p>We provide secure and hassle-free online payments for your convenience.</p>
+        </div>
+    </div>
             
-            <input type="date" placeholder="Drop-off Date">
-            </select>
-
-            <select>
-                <option value="all">All Car Types</option>
-                <option value="suv">SUV</option>
-                <option value="sedan">Sedan</option>
-                <option value="compact">Compact</option>
-            </select>
-            <button type="submit">Search</button>
-        </form>
-    </section>
-
-    <!-- Search Results -->
-    <section class="search-results">
-        <h2>Available Cars</h2>
-        <div class="car-list">
-            <div class="car-item">
-                <img src="car1.jpg" alt="Car Image">
-                <div class="car-details">
-                    <h3>Car Model 1</h3>
-                    <p>Price: $50/day</p>
-                    <button>Book Now</button>
-                </div>
-            </div>
-            <div class="car-item">
-                <img src="car2.jpg" alt="Car Image">
-                <div class="car-details">
-                    <h3>Car Model 2</h3>
-                    <p>Price: $60/day</p>
-                    <button>Book Now</button>
-                </div>
-            </div>
-            <!-- More car items here -->
+</section>
+    
+</section>
+<!-- Reviews Section -->
+<section id="review" class="review-section">
+    <h2>Customer Reviews</h2>
+    <div class="review-grid">
+        <div class="review-card">
+            <img src="customer1.jpg" alt="Customer 1">
+            <h3>Johnson</h3>
+            <p>“Great service and amazing cars. I highly recommend this rental service!”</p>
         </div>
-    </section>
+        <div class="review-card">
+            <img src="customer2.jpg" alt="Customer 2">
+            <h3>Marry</h3>
+            <p>“The booking process was smooth, and the car was in excellent condition.”</p>
+        </div>
+        <div class="review-card">
+            <img src="customer3.jpg" alt="Customer 3">
+            <h3>Mark Wilson</h3>
+            <p>“Highly satisfied with the service. Will definitely rent again!”</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Car Details -->
-    <section class="car-details-page">
-        <h2>Car Model 1</h2>
-        <div class="car-gallery">
-            <img src="car1.jpg" alt="Car Image">
-            <!-- More images here -->
-        </div>
-        <div class="car-specs">
-            <h3>Specifications</h3>
-            <p>Details about the car...</p>
-        </div>
-        <form class="booking-form">
-            <h3>Book This Car</h3>
-            <input type="date" placeholder="Pick-up Date">
-            <input type="date" placeholder="Drop-off Date">
-            <button type="submit">Confirm Booking</button>
-        </form>
-        <div class="customer-reviews">
-            <h3>Customer Reviews</h3>
-            <p>Review 1...</p>
-            <p>Review 2...</p>
-            <!-- More reviews here -->
-        </div>
-    </section>
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <h3>Car Rental</h3>
+        <p>Your reliable partner for car rentals at affordable prices.</p>
+        <ul class="socials">
+            <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+            <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+            <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+            <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Car Rental | Designed by A.R.</p>
+    </div>
+</footer>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 CarRental. All rights reserved.</p>
-    </footer>
+
+    <!--Link to js-->
+    <script src="main.js"></script>
 </body>
 </html>
